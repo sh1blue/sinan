@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0F231B;
+  color: #F4F1E6;
+}
+
+/* Diagonal chalk-line divider — references a pitch's halfway line */
+.chalk-divider {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(217, 164, 65, 0.6) 20%,
+    rgba(217, 164, 65, 0.6) 80%,
+    transparent 100%
+  );
+}
+
+.section-label {
+  font-family: var(--font-display);
+  letter-spacing: 0.18em;
+}
+
+/* Utility: numbered corner-arc mark used sparingly as a motif */
+.corner-arc::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(217, 164, 65, 0.5);
+  border-radius: 9999px;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotate(45deg);
+}
+
+::selection {
+  background: #FF5A29;
+  color: #0B120D;
+}
