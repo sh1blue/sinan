@@ -35,8 +35,8 @@ export default function ProductActivations() {
           </div>
           <div className="relative aspect-[4/5] overflow-hidden">
             <Image
-              src="/images/doha-street-pose.jpg"
-              alt="Sinan Basim performing a freestyle pose on a street in Doha, Qatar"
+              src="/images/product-activations-freestyle.png"
+              alt="Sinan Basim freestyling with a ball inside a retail store for a product activation"
               fill
               className="object-cover"
             />

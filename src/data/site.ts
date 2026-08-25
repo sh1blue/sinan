@@ -23,6 +23,22 @@ export const site = {
     "Tea World",
     "Naimi Cafeteria",
     "Café de Classico",
+    "Al Hameel Restaurant",
+  ],
+  logoBrands: [
+    { name: "Kickoff Fusion Restaurant", logo: "/images/brands/kickoff-fusion.jpg" },
+    { name: "Retail Mart", logo: "/images/brands/retail-mart.jpg" },
+    { name: "Paris Hypermarket", logo: "/images/brands/paris-hypermarket.jpg" },
+    { name: "Curry Leaves Restaurant", logo: "/images/brands/curry-leaves.jpg" },
+    { name: "Chef Trios Restaurant", logo: "/images/brands/chef-trios.jpg" },
+    { name: "Total Tools", logo: "/images/brands/total-tools.jpg" },
+    { name: "Riyadh Al Oasis Restaurant", logo: "/images/brands/riyadh-al-oasis.jpg" },
+    { name: "Puttum Kattanum Restaurant", logo: "/images/brands/puttum-kattanum.jpg" },
+    { name: "Gulf Food Centre", logo: "/images/brands/gulf-food-centre.jpg" },
+    { name: "Ahalan Mandi", logo: "/images/brands/ahalan-mandi.jpg" },
+    { name: "Batool Grill", logo: "/images/brands/batool-grill.jpg" },
+    { name: "Qissa Restaurant", logo: "/images/brands/qissa.jpg" },
+    { name: "Gymslave", logo: "/images/brands/gymslave.jpg" },
   ],
   milestones: [
     {

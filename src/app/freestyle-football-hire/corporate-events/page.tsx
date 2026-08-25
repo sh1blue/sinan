@@ -35,8 +35,8 @@ export default function CorporateEvents() {
           </div>
           <div className="relative aspect-[4/5] overflow-hidden">
             <Image
-              src="/images/westbay-skyline-pose.jpg"
-              alt="Sinan Basim performing a freestyle pose against the West Bay Doha skyline"
+              src="/images/corporate-events-freestyle.png"
+              alt="Sinan Basim freestyling on stage at a corporate event activation"
               fill
               className="object-cover"
             />

@@ -145,9 +145,25 @@ export default function Home() {
           <p className="section-label text-center text-xs uppercase text-gold">
             Trusted By
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+          <div className="mt-8 grid grid-cols-3 items-center gap-6 sm:grid-cols-4 md:grid-cols-6">
+            {site.logoBrands.map((b) => (
+              <div
+                key={b.name}
+                className="relative flex aspect-square items-center justify-center overflow-hidden bg-chalk/5 p-3 grayscale transition hover:grayscale-0"
+                title={b.name}
+              >
+                <Image
+                  src={b.logo}
+                  alt={`${b.name} logo`}
+                  fill
+                  className="object-contain p-3"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
             {site.brands.map((b) => (
-              <span key={b} className="font-display text-lg text-chalk-dim/60 md:text-xl">
+              <span key={b} className="font-display text-base text-chalk-dim/50 md:text-lg">
                 {b}
               </span>
             ))}
