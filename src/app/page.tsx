@@ -79,7 +79,7 @@ export default function Home() {
         <div className="mt-10 grid gap-4 sm:grid-cols-3">
           <InstagramEmbed url="https://www.instagram.com/reel/CWDubbEh1zh/" />
           <InstagramEmbed url="https://www.instagram.com/reel/CgyxXOyAfzl/" />
-          <InstagramEmbed url="https://www.instagram.com/tv/CMMrY8WAuz1/" />
+          <InstagramEmbed url="https://www.instagram.com/reel/DShivi6iJU-/" />
         </div>
         <Link href="/recent-work" className="mt-6 inline-block text-sm font-medium text-flare md:hidden">View all →</Link>
       </section>
