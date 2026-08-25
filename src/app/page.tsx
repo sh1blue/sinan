@@ -1,70 +1,149 @@
 import Link from "next/link";
 import Image from "next/image";
-import PageHero from "@/components/PageHero";
+import StatMarquee from "@/components/StatMarquee";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
-import { site } from "@/data/site";
+import HeroSlideshow from "@/components/HeroSlideshow";
+import { site, hireServices } from "@/data/site";
 
-export const metadata = { title: `Commercial Brands | ${site.name}` };
-
-const work = [
-  {
-    brand: "Gymslave × Kerala Blasters FC",
-    text: "Sinan's first major brand partnership — promoting official Kerala Blasters FC masks through freestyle content during the COVID-19 period, combining performance with product promotion for one of the Indian Super League's prominent clubs.",
-    image: "/images/barca-jersey-headstall.jpg",
-    imageAlt: "Sinan Basim balancing a football while wearing a football jersey",
-  },
-  {
-    brand: "Saudia Hyper & Rawabi Hyper",
-    text: "Promotional video campaigns for two leading retail brands, blending freestyle football sequences with product-focused storytelling.",
-    image: null,
-    imageAlt: "",
-  },
-  {
-    brand: "Tea World, Naimi Cafeteria & Café de Classico",
-    text: "Concept, filming, and editing for café and restaurant promotional content — bringing energy and movement to hospitality marketing.",
-    image: null,
-    imageAlt: "",
-  },
-];
-
-export default function CommercialBrands() {
+export default function Home() {
   return (
     <>
-      <PageHero
-        eyebrow="Commercial Brands"
-        title="Brand Partnerships"
-        intro="30+ promotional videos produced for businesses and brands — concept, filming, and edit, end to end."
-      />
-
-      <section className="mx-auto max-w-6xl px-5 py-20">
-        <div className="space-y-16">
-          {work.map((w, i) => (
-            <div
-              key={w.brand}
-              className={`grid items-center gap-10 md:grid-cols-2 ${
-                i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""
-              }`}
-            >
-              {w.image ? (
-                <div className="relative aspect-video overflow-hidden">
-                  <Image src={w.image} alt={w.imageAlt} fill className="object-cover" />
-                </div>
-              ) : (
-                <ImagePlaceholder label={`${w.brand} campaign`} ratio="aspect-video" />
-              )}
-              <div>
-                <h3 className="font-display text-3xl text-chalk">{w.brand}</h3>
-                <p className="mt-4 text-base leading-relaxed text-chalk-dim/80">{w.text}</p>
-              </div>
+      {/* HERO */}
+      <section className="relative overflow-hidden bg-turf">
+        {/* Mobile hero — single static full-bleed image, text overlaid, no slideshow */}
+        <div className="relative flex h-[88vh] min-h-[560px] w-full flex-col justify-end overflow-hidden md:hidden">
+          <Image
+            src="/images/hero-sea-kick.jpg"
+            alt="Sinan Basim mid bicycle-kick in the sea"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-turf via-turf/50 to-turf/10" />
+          <div className="relative z-10 px-5 pb-14">
+            <p className="section-label text-xs uppercase text-gold">
+              Doha, Qatar
+            </p>
+            <h1 className="font-display mt-3 text-5xl leading-[0.92] text-chalk">
+              FOOTBALL
+              <br />
+              <span className="text-flare">FREESTYLER</span>
+            </h1>
+            <p className="mt-4 text-base leading-relaxed text-chalk-dim/90">
+              Sinan Basim — 8 years turning ball control into content, brand
+              campaigns, and live performances watched by millions.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link
+                href="/contact-us"
+                className="bg-flare px-6 py-3 font-medium text-turf transition hover:bg-flare-dark"
+              >
+                Book Sinan
+              </Link>
+              <Link
+                href="/about-us"
+                className="border border-chalk-dim/40 px-6 py-3 font-medium text-chalk transition hover:border-flare hover:text-flare"
+              >
+                The Story
+              </Link>
             </div>
+          </div>
+        </div>
+
+        {/* Desktop hero — full-bleed background with centered text, matching reference layout */}
+        <div className="relative hidden h-[92vh] min-h-[680px] w-full md:block">
+          <HeroSlideshow />
+          <div className="relative z-10 flex h-full flex-col items-center justify-center px-5 text-center">
+            <h1 className="font-display text-7xl leading-[0.95] text-chalk lg:text-8xl">
+              SINAN BASIM
+            </h1>
+            <p className="font-display mt-4 text-2xl tracking-[0.08em] text-flare lg:text-3xl">
+              FOOTBALL FREESTYLER &amp; CONTENT CREATOR
+            </p>
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <Link
+                href="/contact-us"
+                className="bg-flare px-7 py-3.5 font-medium text-turf transition hover:bg-flare-dark"
+              >
+                Book Sinan
+              </Link>
+              <Link
+                href="/about-us"
+                className="border border-white/40 px-7 py-3.5 font-medium text-white transition hover:border-flare hover:text-flare"
+              >
+                The Story
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <StatMarquee />
+
+      {/* ABOUT TEASER */}
+      <section className="mx-auto max-w-6xl px-5 py-24">
+        <div className="grid gap-12 md:grid-cols-2 md:items-center">
+          <div className="relative aspect-[4/5] overflow-hidden">
+            <Image
+              src="/images/doha-street-pose.jpg"
+              alt="Sinan Basim performing a freestyle pose on a street in Doha, Qatar"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <p className="section-label text-xs uppercase text-gold">The Story</p>
+            <h2 className="font-display mt-3 text-4xl text-chalk md:text-5xl">
+              From Lockdown to World Cup Fan Zones
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-chalk-dim/80">
+              What started as a way to stay active during COVID-19 became 8
+              years of dedication — performances at the FIFA World Cup Qatar
+              2022 and AFC Asian Cup 2023 Fan Zones, a reel that crossed 22
+              million views, and a growing list of brand collaborations.
+            </p>
+            <Link
+              href="/about-us"
+              className="mt-6 inline-block border-b border-flare text-sm font-medium text-flare"
+            >
+              Read the full story →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <div className="chalk-divider mx-auto max-w-6xl" />
+
+      {/* HIRE SERVICES */}
+      <section className="mx-auto max-w-6xl px-5 py-24">
+        <p className="section-label text-xs uppercase text-gold">Hire</p>
+        <h2 className="font-display mt-3 text-4xl text-chalk md:text-5xl">
+          Book a Live Set
+        </h2>
+        <div className="mt-10 grid gap-px overflow-hidden border border-turf-line bg-turf-line sm:grid-cols-2">
+          {Object.values(hireServices).map((s) => (
+            <Link
+              key={s.slug}
+              href={`/freestyle-football-hire/${s.slug}`}
+              className="group bg-turf p-8 transition hover:bg-turf-light"
+            >
+              <h3 className="font-display text-2xl text-chalk group-hover:text-flare">
+                {s.title}
+              </h3>
+              <p className="mt-2 text-sm text-chalk-dim/70">{s.intro}</p>
+              <span className="mt-4 inline-block text-sm text-gold">
+                Learn more →
+              </span>
+            </Link>
           ))}
         </div>
       </section>
 
-      <section className="border-t border-turf-line bg-turf-light py-20">
+      {/* COMMERCIAL BRANDS TEASER */}
+      <section className="border-y border-turf-line bg-turf-light py-16">
         <div className="mx-auto max-w-6xl px-5">
           <p className="section-label text-center text-xs uppercase text-gold">
-            Also Worked With
+            Trusted By
           </p>
           <div className="mt-8 grid grid-cols-3 items-center gap-6 sm:grid-cols-4 md:grid-cols-6">
             {site.logoBrands.map((b) => (
@@ -73,7 +152,12 @@ export default function CommercialBrands() {
                 className="relative flex aspect-square items-center justify-center overflow-hidden bg-chalk/5 p-3 grayscale transition hover:grayscale-0"
                 title={b.name}
               >
-                <Image src={b.logo} alt={`${b.name} logo`} fill className="object-contain p-3" />
+                <Image
+                  src={b.logo}
+                  alt={`${b.name} logo`}
+                  fill
+                  className="object-contain p-3"
+                />
               </div>
             ))}
           </div>
@@ -84,22 +168,51 @@ export default function CommercialBrands() {
               </span>
             ))}
           </div>
+          <div className="mt-8 text-center">
+            <Link href="/commercial-brands" className="text-sm font-medium text-flare">
+              View commercial work →
+            </Link>
+          </div>
         </div>
       </section>
 
-      <section className="border-t border-turf-line bg-turf py-20">
+      {/* RECENT WORK TEASER */}
+      <section className="mx-auto max-w-6xl px-5 py-24">
+        <div className="flex items-end justify-between">
+          <div>
+            <p className="section-label text-xs uppercase text-gold">Watch</p>
+            <h2 className="font-display mt-3 text-4xl text-chalk md:text-5xl">
+              Recent Work
+            </h2>
+          </div>
+          <Link href="/recent-work" className="hidden text-sm font-medium text-flare md:block">
+            View all →
+          </Link>
+        </div>
+        <div className="mt-10 grid gap-4 sm:grid-cols-3">
+          <ImagePlaceholder label="22M view reel" ratio="aspect-[9/16]" />
+          <ImagePlaceholder label="With I.M. Vijayan" ratio="aspect-[9/16]" />
+          <ImagePlaceholder label="Gymslave × KBFC" ratio="aspect-[9/16]" />
+        </div>
+        <Link href="/recent-work" className="mt-6 inline-block text-sm font-medium text-flare md:hidden">
+          View all →
+        </Link>
+      </section>
+
+      {/* CTA */}
+      <section className="border-t border-turf-line bg-turf-light py-24">
         <div className="mx-auto max-w-3xl px-5 text-center">
-          <h2 className="font-display text-3xl text-chalk md:text-4xl">
-            Have a product or campaign in mind?
+          <h2 className="font-display text-4xl text-chalk md:text-5xl">
+            Got an event in mind?
           </h2>
-          <p className="mt-3 text-chalk-dim/70">
-            From concept to final edit — let's build something for your brand.
+          <p className="mt-4 text-chalk-dim/80">
+            Reply within 24 hours — tell me about your event and let's talk.
           </p>
           <Link
             href="/contact-us"
-            className="mt-7 inline-block bg-flare px-8 py-4 font-medium text-turf transition hover:bg-flare-dark"
+            className="mt-8 inline-block bg-flare px-8 py-4 font-medium text-turf transition hover:bg-flare-dark"
           >
-            Start a Conversation
+            Book Sinan
           </Link>
         </div>
       </section>
