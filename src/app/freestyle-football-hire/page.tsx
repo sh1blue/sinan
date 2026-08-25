@@ -1,32 +1,46 @@
 import Link from "next/link";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { site, hireServices } from "@/data/site";
 
-export const metadata = { title: `Freestyle Football Hire | ${site.name}` };
+const service = hireServices["product-activations"];
+export const metadata = { title: `${service.title} | ${site.name}` };
 
-export default function HireIndex() {
+export default function ProductActivations() {
   return (
     <>
-      <PageHero
-        eyebrow="Book a Performance"
-        title="Freestyle Football Hire"
-        intro="Live sets, brand activations, and content built around your event."
-      />
+      <PageHero eyebrow="Freestyle Football Hire" title={service.title} intro={service.intro} />
       <section className="mx-auto max-w-6xl px-5 py-20">
-        <div className="grid gap-px overflow-hidden border border-turf-line bg-turf-line sm:grid-cols-2">
-          {Object.values(hireServices).map((s) => (
+        <div className="grid gap-14 md:grid-cols-2 md:items-start">
+          <div className="space-y-5">
+            {service.body.map((p, i) => (
+              <p key={i} className="text-base leading-relaxed text-chalk-dim/85">
+                {p}
+              </p>
+            ))}
+            <ul className="mt-8 space-y-3">
+              {service.bullets.map((b) => (
+                <li key={b} className="flex gap-3 text-sm text-chalk-dim/80">
+                  <span className="text-flare">→</span>
+                  {b}
+                </li>
+              ))}
+            </ul>
             <Link
-              key={s.slug}
-              href={`/freestyle-football-hire/${s.slug}`}
-              className="group bg-turf p-8 transition hover:bg-turf-light"
+              href="/contact-us"
+              className="mt-8 inline-block bg-flare px-7 py-3.5 font-medium text-turf transition hover:bg-flare-dark"
             >
-              <h3 className="font-display text-2xl text-chalk group-hover:text-flare">
-                {s.title}
-              </h3>
-              <p className="mt-2 text-sm text-chalk-dim/70">{s.intro}</p>
-              <span className="mt-4 inline-block text-sm text-gold">Learn more →</span>
+              Enquire Now
             </Link>
-          ))}
+          </div>
+          <div className="relative aspect-[4/5] overflow-hidden">
+            <Image
+              src="/images/product-activations-freestyle.png"
+              alt="Sinan Basim freestyling with a ball inside a retail store for a product activation"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </section>
     </>

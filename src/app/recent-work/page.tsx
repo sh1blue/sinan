@@ -2,14 +2,10 @@ import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import InstagramEmbed from "@/components/InstagramEmbed";
 import { site } from "@/data/site";
-import { client } from "@/sanity/lib/client";
-import { urlFor } from "@/sanity/lib/image";
-import { photosByCategoryQuery, allVideosQuery } from "@/sanity/lib/queries";
 
 export const metadata = { title: `Recent Work | ${site.name}` };
 
-// Fallback content — shown until real content is added in the Sanity Studio (/studio)
-const fallbackPhotos = [
+const photos = [
   { src: "/images/hero-sea-kick.jpg", alt: "Bicycle kick performed in the sea" },
   { src: "/images/westbay-skyline-pose.jpg", alt: "Freestyle pose against the West Bay Doha skyline" },
   { src: "/images/barca-jersey-headstall.jpg", alt: "Ball balance on the face wearing a Barça jersey" },
@@ -18,7 +14,7 @@ const fallbackPhotos = [
   { src: "/images/qfm-radio.jpg", alt: "Sinan Basim at a Qatar radio station appearance" },
 ];
 
-const fallbackReels = [
+const reels = [
   {
     title: "22M View Reel",
     description: "One of Sinan's most-watched pieces of freestyle content.",
@@ -41,32 +37,7 @@ const fallbackReels = [
   },
 ];
 
-type SanityPhoto = { _id: string; image: any; alt: string };
-type SanityVideo = { _id: string; title: string; description?: string; instagramUrl: string };
-
-export default async function RecentWork() {
-  // If Sanity isn't configured yet, gracefully fall back rather than crashing the page
-  let cmsPhotos: SanityPhoto[] = [];
-  let cmsVideos: SanityVideo[] = [];
-  try {
-    [cmsPhotos, cmsVideos] = await Promise.all([
-      client.fetch(photosByCategoryQuery, { category: "gallery" }),
-      client.fetch(allVideosQuery),
-    ]);
-  } catch {
-    // Sanity not configured yet — fallbackPhotos/fallbackReels below will be used instead
-  }
-
-  const photos =
-    cmsPhotos.length > 0
-      ? cmsPhotos.map((p) => ({ src: urlFor(p.image).width(900).url(), alt: p.alt }))
-      : fallbackPhotos;
-
-  const reels =
-    cmsVideos.length > 0
-      ? cmsVideos.map((v) => ({ title: v.title, description: v.description || "", url: v.instagramUrl }))
-      : fallbackReels;
-
+export default function RecentWork() {
   return (
     <>
       <PageHero

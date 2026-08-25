@@ -1,21 +1,15 @@
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { site } from "@/data/site";
-import { client } from "@/sanity/lib/client";
-import { allTestimonialsQuery } from "@/sanity/lib/queries";
 
 export const metadata = { title: `Testimonials | ${site.name}` };
 
-type SanityTestimonial = { _id: string; quote: string; name: string; role?: string };
+type Testimonial = { _id: string; quote: string; name: string; role?: string };
 
-export default async function Testimonials() {
-  let testimonials: SanityTestimonial[] = [];
-  try {
-    testimonials = await client.fetch(allTestimonialsQuery);
-  } catch {
-    // Sanity not configured yet — falls through to the empty state below
-  }
+// Add testimonials here as they come in — swap this out with real quotes.
+const testimonials: Testimonial[] = [];
 
+export default function Testimonials() {
   return (
     <>
       <PageHero
