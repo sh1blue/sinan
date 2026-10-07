@@ -6,7 +6,7 @@ import { useState } from "react";
 // 1. Create a free form at https://formspree.io
 // 2. Copy the endpoint it gives you (looks like https://formspree.io/f/xxxxxxx)
 // 3. Paste it below
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xvzyznjo";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
