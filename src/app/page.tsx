@@ -212,7 +212,7 @@ export default function Home() {
         <div className="mt-10 grid gap-10 sm:grid-cols-3">
           {recentWorkVideos.map((v) => (
             <div key={v.src}>
-              <VideoPlayer src={v.src} poster={v.poster} title={v.title} />
+              <VideoPlayer src={v.src} title={v.title} />
               <h3 className="font-display mt-3 text-lg text-chalk">{v.title}</h3>
               <p className="mt-1 text-sm text-chalk-dim/60">{v.description}</p>
             </div>
