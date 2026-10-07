@@ -15,19 +15,16 @@ const recentWorkVideos = [
     title: "22M View Reel",
     description: "One of Sinan's most-watched pieces of freestyle content.",
     src: "/videos/SaveClip.App_AQOlQP5DQP74GYuu56MBw-YHjdU0-0B5PGtl7Z4dwePFb-WZfKoIjkJVdwTwKf4iA5wePAR2_JnUibtLPe1inUeh8KY4z61bvGmx2ic.mp4",
-    poster: "/images/hero-sea-kick.jpg",
   },
   {
     title: "Baladna Qatar Fan Zone",
     description: "FIFA World Cup Qatar 2022 Fan Zone performance.",
-    src: "/videos/baladna_qatar.mov",
-    poster: "/images/westbay-skyline-pose.jpg",
+    src: "/videos/baladna_qatar.mp4",
   },
   {
     title: "With I. M. Vijayan",
     description: "Performing with and in front of the Indian football legend.",
     src: "/videos/with_im_vijayan.mp4",
-    poster: "/images/doha-street-pose.jpg",
   },
 ];
 
