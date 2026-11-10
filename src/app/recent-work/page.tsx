@@ -56,6 +56,11 @@ const reels = [
     src: "/videos/Chef_Trios.mp4",
     poster: "/images/doha-street-pose.jpg",
   },
+  {
+    title: "Product Review",
+    description: "Product review video featuring Sinan.",
+    src: "/videos/product_rev_mic.mp4",
+  },
 ];
 
 export default function RecentWork() {
