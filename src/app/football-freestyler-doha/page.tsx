@@ -212,6 +212,13 @@ export default function DohaFreestylerPage() {
               Website contact
             </Link>
           </div>
+          <Link
+            href="/locations"
+            className="mt-8 inline-block border-b border-turf-line pb-1 text-sm text-chalk-dim transition hover:border-flare hover:text-flare"
+          >
+            Explore all Qatar locations →
+          </Link>
+          </div>
         </div>
       </section>
     </>
