@@ -241,32 +241,43 @@ export default function Home() {
       <div className="chalk-divider mx-auto max-w-6xl" />
 
 
-      {/* THE STORY */}
+      {/* EXPERIENCE & CREDIBILITY */}
       <section className="mx-auto max-w-6xl px-5 py-24">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div className="relative aspect-[4/5] overflow-hidden">
             <Image
               src="/images/doha-street-pose.jpg"
-              alt="Sinan Basim performing a freestyle pose on a street in Doha, Qatar"
+              alt="Sinan Basim performing a football freestyle pose in Doha, Qatar"
               fill
               className="object-cover"
             />
           </div>
           <div>
-            <p className="section-label text-xs uppercase text-gold">Meet the Freestyler</p>
+            <p className="section-label text-xs uppercase text-gold">Experience & Recognition</p>
             <h2 className="font-display mt-3 text-4xl text-chalk md:text-5xl">
-              From Lockdown to World Cup Fan Zones
+              From Qatar's Fan Zones to a Global Audience
             </h2>
             <p className="mt-5 text-base leading-relaxed text-chalk-dim/80">
-              What started as a way to stay active during COVID-19 grew into a journey of dedication —
-              performances at the FIFA World Cup Qatar 2022 and AFC Asian Cup 2023 Fan Zones, a reel
-              that crossed 22 million views, and a growing list of brand collaborations.
+              Sinan Basim has brought football freestyle to major sporting events in Qatar,
+              including the FIFA World Cup Qatar 2022 Fan Zone at Baladna Al Khor and the
+              AFC Asian Cup 2023 Fan Zone. His freestyle content has also reached a wider
+              audience, with one reel passing 22 million views.
             </p>
+            <div className="mt-7 grid gap-4 sm:grid-cols-2">
+              <div className="border-l-2 border-flare pl-4">
+                <p className="font-display text-lg text-chalk">FIFA World Cup 2022</p>
+                <p className="mt-1 text-sm text-chalk-dim/65">Baladna Al Khor Fan Zone</p>
+              </div>
+              <div className="border-l-2 border-flare pl-4">
+                <p className="font-display text-lg text-chalk">AFC Asian Cup 2023</p>
+                <p className="mt-1 text-sm text-chalk-dim/65">Fan Zone performance</p>
+              </div>
+            </div>
             <Link
               href="/about-us"
-              className="mt-6 inline-block border-b border-flare text-sm font-medium text-flare"
+              className="mt-7 inline-block border-b border-flare pb-1 text-sm font-medium text-flare"
             >
-              Read the full story →
+              Discover Sinan's journey →
             </Link>
           </div>
         </div>
