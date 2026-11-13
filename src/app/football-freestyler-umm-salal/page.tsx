@@ -2,7 +2,7 @@ import LocationLandingPage from "@/components/LocationLandingPage";
 
 export const metadata = {
   title: "Football Freestyler in Umm Salal, Qatar | Sinan Basim",
-  description: "Searching for a football freestyler in Umm Salal? Sinan Basim is based in Doha and accepts enquiries for event performances across Qatar, including corporate gatherings, community occasions, sports events and private celebrations.",
+  description: "Searching for a football freestyler in Umm Salal? Sinan Basim is based in Doha and available for event performances across Qatar, including corporate gatherings, community occasions, sports events and private celebrations.",
   alternates: { canonical: "/football-freestyler-umm-salal" },
   openGraph: {
     type: "website" as const,
