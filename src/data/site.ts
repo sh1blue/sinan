@@ -4,7 +4,7 @@ export const site = {
   tagline: "Football Freestyler · Content Creator · Artist",
   location: "Doha, Qatar",
   email: "Sbnfreestyler@gmail.com",
-  whatsapp: "", // add number, e.g. "97400000000" (country code, no + or spaces)
+  whatsapp: "97470196701",
   socials: {
     instagram: "https://www.instagram.com/sinxn_bxsim",
     youtube: "https://youtube.com/@sinxn_bxsim",
