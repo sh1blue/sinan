@@ -138,11 +138,14 @@ export default function Home() {
             <p className="section-label text-xs uppercase tracking-[0.2em] text-gold">
               SINAN BASIM · DOHA, QATAR
             </p>
-            <div className="font-display mt-4 text-7xl leading-[0.95] text-chalk lg:text-8xl">
+            <h1 className="font-display mt-4 text-7xl leading-[0.95] text-chalk lg:text-8xl">
               FOOTBALL FREESTYLER
-            </div>
+            </h1>
             <p className="font-display mt-3 text-2xl tracking-[0.08em] text-flare lg:text-3xl">
               IN QATAR
+            </p>
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-chalk-dim/90 md:text-lg">
+              Live football freestyle performances for events, brands and audiences across Qatar.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Link
