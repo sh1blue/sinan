@@ -5,9 +5,54 @@ import StatMarquee from "@/components/StatMarquee";
 import VideoPlayer from "@/components/VideoPlayer";
 import { site } from "@/data/site";
 
+const siteUrl = "https://sbnfreestyler.com";
+
 export const metadata = {
-  title: `${site.name} | Football Freestyler · Content Creator · Artist`,
-  description: `Sinan Basim (Sbn Freestyler) — football freestyler and content creator based in Doha, Qatar. FIFA World Cup & AFC Asian Cup Fan Zone performer, 22M+ view content, available for hire.`,
+  title: "Football Freestyler Qatar | Sinan Basim",
+  description:
+    "Looking for a football freestyler in Qatar? Book Sinan Basim for live performances, corporate events, sports events and brand activations across Qatar.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website" as const,
+    url: siteUrl,
+    title: "Football Freestyler Qatar | Sinan Basim",
+    description:
+      "Book Sinan Basim for football freestyle performances, corporate events, sports events and brand activations across Qatar.",
+    images: [
+      {
+        url: "/images/hero-sea-kick.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Sinan Basim performing football freestyle in Qatar",
+      },
+    ],
+  },
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${siteUrl}/#sinan-basim`,
+  name: "Sinan Basim",
+  alternateName: "SBN Freestyler",
+  url: siteUrl,
+  image: `${siteUrl}/images/hero-sea-kick.jpg`,
+  jobTitle: "Football Freestyler and Content Creator",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Doha",
+    addressCountry: "QA",
+  },
+  sameAs: [site.socials.instagram, site.socials.youtube, site.socials.tiktok],
+  knowsAbout: [
+    "Football freestyle",
+    "Freestyle football performances",
+    "Sports entertainment",
+    "Brand activations",
+    "Event performances",
+  ],
 };
 
 const recentWorkVideos = [
@@ -31,6 +76,10 @@ const recentWorkVideos = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       {/* HERO */}
       <section className="relative overflow-hidden bg-turf">
         {/* Mobile hero */}
@@ -79,7 +128,7 @@ export default function Home() {
               SINAN BASIM
             </h1>
             <p className="font-display mt-4 text-2xl tracking-[0.08em] text-flare lg:text-3xl">
-              FOOTBALL FREESTYLER &amp; CONTENT CREATOR
+              FOOTBALL FREESTYLER IN QATAR
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Link
@@ -228,7 +277,7 @@ export default function Home() {
         <div className="mx-auto max-w-3xl px-5 text-center">
           <h2 className="font-display text-4xl text-chalk md:text-5xl">Got an event in mind?</h2>
           <p className="mt-4 text-chalk-dim/80">
-            Reply within 24 hours — tell me about your event and let&apos;s talk.
+            Reply within 24 hours — tell me about your event and let's talk.
           </p>
           <Link
             href="/contact-us"
