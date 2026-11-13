@@ -6,6 +6,7 @@ import VideoPlayer from "@/components/VideoPlayer";
 import { site } from "@/data/site";
 
 const siteUrl = "https://sbnfreestyler.com";
+const whatsappBookingUrl = "https://wa.me/97470196701?text=Hi%20Sinan%2C%20I%27d%20like%20to%20enquire%20about%20a%20football%20freestyle%20performance%20in%20Qatar.";
 
 export const metadata = {
   title: {
@@ -161,12 +162,14 @@ export default function Home() {
               Discover Sinan's work and enquire about a booking.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link
-                href="/contact-us"
+              <a
+                href={whatsappBookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-flare px-6 py-3 font-medium text-turf transition hover:bg-flare-dark"
               >
-                Book Sinan
-              </Link>
+                Book on WhatsApp
+              </a>
               <Link
                 href="/about-us"
                 className="border border-chalk-dim/40 px-6 py-3 font-medium text-chalk transition hover:border-flare hover:text-flare"
@@ -194,12 +197,14 @@ export default function Home() {
               Live football freestyle performances for events, brands and audiences across Qatar.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <Link
-                href="/contact-us"
+              <a
+                href={whatsappBookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-flare px-7 py-3.5 font-medium text-turf transition hover:bg-flare-dark"
               >
-                Book Sinan
-              </Link>
+                Book on WhatsApp
+              </a>
               <Link
                 href="/about-us"
                 className="border border-white/40 px-7 py-3.5 font-medium text-white transition hover:border-flare hover:text-flare"
@@ -425,12 +430,14 @@ export default function Home() {
           <p className="mt-4 text-chalk-dim/80">
             Reply within 24 hours — tell me about your event and let's talk.
           </p>
-          <Link
-            href="/contact-us"
+          <a
+            href={whatsappBookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-8 inline-block bg-flare px-8 py-4 font-medium text-turf transition hover:bg-flare-dark"
           >
-            Book Sinan
-          </Link>
+            Book on WhatsApp
+          </a>
         </div>
       </section>
     </>
