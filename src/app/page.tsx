@@ -64,6 +64,48 @@ const personJsonLd = {
   ],
 };
 
+
+const faqItems = [
+  {
+    question: "Can I book a football freestyler in Qatar?",
+    answer:
+      "Yes. Sinan Basim is based in Doha and takes enquiries for football freestyle performances across Qatar. Share your event details through the website or send a direct message on social media to discuss your booking.",
+  },
+  {
+    question: "Which types of events can Sinan perform at?",
+    answer:
+      "Sinan offers football freestyle entertainment for corporate events, product activations, sports events, weddings and private celebrations. The performance can be discussed around the event format and audience.",
+  },
+  {
+    question: "Does Sinan perform outside Doha?",
+    answer:
+      "Yes. Sinan is based in Doha and can be booked for events across Qatar. Share the event location when enquiring so the details can be discussed.",
+  },
+  {
+    question: "How long does a football freestyle performance last?",
+    answer:
+      "Performance duration is flexible and can be agreed with the client based on the event schedule, format and requirements. Get in touch to discuss the timing that works for your event.",
+  },
+  {
+    question: "How can I enquire about a booking?",
+    answer:
+      "You can send Sinan a direct message through his social media channels or submit an enquiry through the website contact page. Include your event date, location and a short description so the booking details can be discussed.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
 const recentWorkVideos = [
   {
     title: "22M View Reel",
@@ -88,6 +130,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       {/* HERO */}
       <section className="relative overflow-hidden bg-turf">
@@ -342,6 +388,34 @@ export default function Home() {
         <Link href="/recent-work" className="mt-6 inline-block text-sm font-medium text-flare md:hidden">
           View all →
         </Link>
+      </section>
+
+      {/* FAQ */}
+      <section className="border-t border-turf-line bg-turf-light py-20 md:py-24">
+        <div className="mx-auto max-w-4xl px-5">
+          <p className="section-label text-xs uppercase text-gold">Booking Questions</p>
+          <h2 className="font-display mt-3 text-4xl text-chalk md:text-5xl">
+            Football Freestyle in Qatar: FAQs
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-chalk-dim/75">
+            A few details to help you plan a football freestyle performance with Sinan Basim.
+          </p>
+          <div className="mt-10 divide-y divide-turf-line border-y border-turf-line">
+            {faqItems.map((item) => (
+              <details key={item.question} className="group py-5">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-display text-lg text-chalk marker:hidden">
+                  {item.question}
+                  <span className="shrink-0 text-xl text-flare transition-transform group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <p className="max-w-3xl pt-4 text-sm leading-relaxed text-chalk-dim/75">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* EVENT CTA */}
