@@ -8,7 +8,7 @@ const locations = [
   { name: "Al-Shahaniya", slug: "al-shahaniya", description: "Live freestyle entertainment for local gatherings, private events and organised programmes." },
   { name: "Umm Salal", slug: "umm-salal", description: "Enquire about a freestyle performance for community events and private celebrations." },
   { name: "Al Daayen", slug: "al-daayen", description: "Event performance enquiries for communities and venues north of Doha." },
-  { name: "Al Shamal", slug: "al-shamal", description: "Discuss performance options and travel details for events in northern Qatar." },
+  { name: "Al Shamal", slug: "al-shamal", description: "Football freestyle performances available for events in northern Qatar." },
 ];
 
 export const metadata = {
@@ -28,7 +28,7 @@ export default function LocationsPage() {
             <span className="mt-2 block text-flare">ACROSS QATAR</span>
           </h1>
           <p className="mt-7 max-w-2xl text-base leading-relaxed text-chalk-dim/85 md:text-lg">
-            Sinan Basim is based in Doha and takes enquiries for football freestyle performances across Qatar.
+            Sinan Basim is based in Doha and available for football freestyle bookings across all eight municipalities of Qatar.
             Explore the municipality pages below and share your event location, date and requirements to discuss a booking.
           </p>
         </div>
@@ -49,7 +49,7 @@ export default function LocationsPage() {
           ))}
         </div>
         <p className="mt-8 text-sm leading-relaxed text-chalk-dim/60">
-          Sinan is based in Doha. Travel, dates and performance availability for each event are discussed directly with the organiser.
+          Football freestyle performances are available throughout Qatar. Contact Sinan on WhatsApp to discuss your event date, schedule and preferred performance format.
         </p>
       </section>
     </>
