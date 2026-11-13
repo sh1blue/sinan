@@ -2,7 +2,7 @@ import LocationLandingPage from "@/components/LocationLandingPage";
 
 export const metadata = {
   title: "Football Freestyler in Al-Shahaniya, Qatar | Sinan Basim",
-  description: "Organising an event in Al-Shahaniya? Enquire about a football freestyle performance by Sinan Basim for community celebrations, sports gatherings, corporate occasions and private events.",
+  description: "Organising an event in Al-Shahaniya? Book a football freestyle performance by Sinan Basim for community celebrations, sports gatherings, corporate occasions and private events.",
   alternates: { canonical: "/football-freestyler-al-shahaniya" },
   openGraph: {
     type: "website" as const,
