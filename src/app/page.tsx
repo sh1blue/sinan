@@ -69,7 +69,7 @@ const faqItems = [
   {
     question: "Can I book a football freestyler in Qatar?",
     answer:
-      "Yes. Sinan Basim is based in Doha and takes enquiries for football freestyle performances across Qatar. Share your event details through the website or send a direct message on social media to discuss your booking.",
+      "Yes. Sinan Basim is based in Doha and takes enquiries for football freestyle performances across Qatar. WhatsApp is the preferred way to discuss a booking. You can also send a direct message on social media or use the website contact page.",
   },
   {
     question: "Which types of events can Sinan perform at?",
@@ -89,7 +89,7 @@ const faqItems = [
   {
     question: "How can I enquire about a booking?",
     answer:
-      "You can send Sinan a direct message through his social media channels or submit an enquiry through the website contact page. Include your event date, location and a short description so the booking details can be discussed.",
+      "WhatsApp is the preferred way to enquire about a booking. You can also send Sinan a direct message through his social media channels or submit an enquiry through the website contact page. Include your event date, location and a short description of your event.",
   },
 ];
 
