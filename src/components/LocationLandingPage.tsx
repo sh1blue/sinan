@@ -118,7 +118,7 @@ export default function LocationLandingPage({
             <p>{localContext}</p>
             <p>{eventContext}</p>
             <p>
-              Sinan is based in Doha and available for bookings throughout Qatar, including ${name}. Performance duration and format are flexible and can be discussed directly with Sinan to suit your event schedule, audience and requirements.
+              Sinan is based in Doha and available for bookings throughout Qatar, including {name}. Performance duration and format are flexible and can be discussed directly with Sinan to suit your event schedule, audience and requirements.
             </p>
           </div>
         </div>
