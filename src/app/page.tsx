@@ -70,7 +70,7 @@ const faqItems = [
   {
     question: "Can I book a football freestyler in Qatar?",
     answer:
-      "Yes. Sinan Basim is based in Doha and takes enquiries for football freestyle performances across Qatar. WhatsApp is the preferred way to discuss a booking. You can also send a direct message on social media or use the website contact page.",
+      "Yes. Sinan Basim is based in Doha and takes enquiries for football freestyle performances across Qatar. WhatsApp is the preferred way to discuss a booking. You can also send Sinan a direct message on Instagram or use the website contact page.",
   },
   {
     question: "Which types of events can Sinan perform at?",
@@ -90,7 +90,7 @@ const faqItems = [
   {
     question: "How can I enquire about a booking?",
     answer:
-      "WhatsApp is the preferred way to enquire about a booking. You can also send Sinan a direct message through his social media channels or submit an enquiry through the website contact page. Include your event date, location and a short description of your event.",
+      "WhatsApp is the preferred way to enquire about a booking. You can also DM Sinan on Instagram or submit an enquiry through the website contact page. Include your event date, location and a short description of your event.",
   },
 ];
 
@@ -170,6 +170,14 @@ export default function Home() {
               >
                 Book on WhatsApp
               </a>
+              <a
+                href={site.socials.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-chalk-dim/40 px-6 py-3 font-medium text-chalk transition hover:border-flare hover:text-flare"
+              >
+                DM on Instagram
+              </a>
               <Link
                 href="/about-us"
                 className="border border-chalk-dim/40 px-6 py-3 font-medium text-chalk transition hover:border-flare hover:text-flare"
@@ -204,6 +212,14 @@ export default function Home() {
                 className="bg-flare px-7 py-3.5 font-medium text-turf transition hover:bg-flare-dark"
               >
                 Book on WhatsApp
+              </a>
+              <a
+                href={site.socials.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-white/40 px-7 py-3.5 font-medium text-white transition hover:border-flare hover:text-flare"
+              >
+                DM on Instagram
               </a>
               <Link
                 href="/about-us"
@@ -430,14 +446,24 @@ export default function Home() {
           <p className="mt-4 text-chalk-dim/80">
             Reply within 24 hours — tell me about your event and let's talk.
           </p>
-          <a
-            href={whatsappBookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-block bg-flare px-8 py-4 font-medium text-turf transition hover:bg-flare-dark"
-          >
-            Book on WhatsApp
-          </a>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <a
+              href={whatsappBookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-flare px-8 py-4 font-medium text-turf transition hover:bg-flare-dark"
+            >
+              Book on WhatsApp
+            </a>
+            <a
+              href={site.socials.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border border-chalk-dim/40 px-8 py-4 font-medium text-chalk transition hover:border-flare hover:text-flare"
+            >
+              DM on Instagram
+            </a>
+          </div>
         </div>
       </section>
     </>
