@@ -8,9 +8,11 @@ import { site } from "@/data/site";
 const siteUrl = "https://sbnfreestyler.com";
 
 export const metadata = {
-  title: "Football Freestyler Qatar | Sinan Basim",
+  title: {
+    absolute: "Football Freestyler Qatar | Sinan Basim",
+  },
   description:
-    "Looking for a football freestyler in Qatar? Book Sinan Basim for live performances, corporate events, sports events and brand activations across Qatar.",
+    "Book Sinan Basim, a football freestyler based in Doha, for live shows, corporate events, sports events and brand activations across Qatar.",
   alternates: {
     canonical: "/",
   },
@@ -19,15 +21,22 @@ export const metadata = {
     url: siteUrl,
     title: "Football Freestyler Qatar | Sinan Basim",
     description:
-      "Book Sinan Basim for football freestyle performances, corporate events, sports events and brand activations across Qatar.",
+      "Live football freestyle performances by Sinan Basim for corporate events, sports events and brand activations across Qatar.",
     images: [
       {
         url: "/images/hero-sea-kick.jpg",
         width: 1200,
         height: 630,
-        alt: "Sinan Basim performing football freestyle in Qatar",
+        alt: "Sinan Basim performing a football freestyle bicycle kick",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image" as const,
+    title: "Football Freestyler Qatar | Sinan Basim",
+    description:
+      "Book Sinan Basim for football freestyle performances and event entertainment across Qatar.",
+    images: ["/images/hero-sea-kick.jpg"],
   },
 };
 
@@ -86,22 +95,24 @@ export default function Home() {
         <div className="relative flex h-[88vh] min-h-[560px] w-full flex-col justify-end overflow-hidden md:hidden">
           <Image
             src="/images/hero-sea-kick.jpg"
-            alt="Sinan Basim mid bicycle-kick in the sea"
+            alt="Sinan Basim performing a football freestyle bicycle kick"
             fill
             priority
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-turf via-turf/50 to-turf/10" />
           <div className="relative z-10 px-5 pb-14">
-            <p className="section-label text-xs uppercase text-gold">Doha, Qatar</p>
+            <p className="section-label text-xs uppercase text-gold">Sinan Basim · Doha, Qatar</p>
             <h1 className="font-display mt-3 text-5xl leading-[0.92] text-chalk">
               FOOTBALL
               <br />
               <span className="text-flare">FREESTYLER</span>
+              <br />
+              <span className="text-2xl tracking-[0.08em] text-chalk">IN QATAR</span>
             </h1>
-            <p className="mt-4 text-base leading-relaxed text-chalk-dim/90">
-              Sinan Basim — 8 years turning ball control into content, brand campaigns, and live
-              performances watched by millions.
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-chalk-dim/90">
+              Live football freestyle performances for events, brands and audiences across Qatar.
+              Discover Sinan's work and enquire about a booking.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
@@ -124,11 +135,14 @@ export default function Home() {
         <div className="relative hidden h-[92vh] min-h-[680px] w-full md:block">
           <HeroSlideshow />
           <div className="relative z-10 flex h-full flex-col items-center justify-center px-5 text-center">
-            <h1 className="font-display text-7xl leading-[0.95] text-chalk lg:text-8xl">
-              SINAN BASIM
-            </h1>
-            <p className="font-display mt-4 text-2xl tracking-[0.08em] text-flare lg:text-3xl">
-              FOOTBALL FREESTYLER IN QATAR
+            <p className="section-label text-xs uppercase tracking-[0.2em] text-gold">
+              SINAN BASIM · DOHA, QATAR
+            </p>
+            <div className="font-display mt-4 text-7xl leading-[0.95] text-chalk lg:text-8xl">
+              FOOTBALL FREESTYLER
+            </div>
+            <p className="font-display mt-3 text-2xl tracking-[0.08em] text-flare lg:text-3xl">
+              IN QATAR
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Link
@@ -151,6 +165,36 @@ export default function Home() {
       {/* STAT MARQUEE */}
       <StatMarquee />
 
+      {/* QATAR SERVICE INTRO */}
+      <section className="mx-auto max-w-6xl px-5 py-20 md:py-24">
+        <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-start">
+          <div>
+            <p className="section-label text-xs uppercase text-gold">Football Freestyle in Qatar</p>
+            <h2 className="font-display mt-3 text-4xl leading-tight text-chalk md:text-5xl">
+              Skill that brings an event to life.
+            </h2>
+          </div>
+          <div className="space-y-4 text-base leading-relaxed text-chalk-dim/80">
+            <p>
+              Looking for a football freestyler in Qatar? Sinan Basim brings live football
+              freestyle performances to events in Doha and across Qatar, combining technical ball
+              skills, creative tricks and audience-focused entertainment.
+            </p>
+            <p>
+              From corporate gatherings and brand activations to sports events and private
+              celebrations, each performance can be shaped around the event, audience and setting.
+              Explore the show options below or get in touch to discuss your event.
+            </p>
+            <Link
+              href="/contact-us"
+              className="inline-block border-b border-flare pb-1 text-sm font-medium text-flare"
+            >
+              Enquire about a performance →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* THE STORY */}
       <section className="mx-auto max-w-6xl px-5 py-24">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
@@ -163,7 +207,7 @@ export default function Home() {
             />
           </div>
           <div>
-            <p className="section-label text-xs uppercase text-gold">The Story</p>
+            <p className="section-label text-xs uppercase text-gold">Meet the Freestyler</p>
             <h2 className="font-display mt-3 text-4xl text-chalk md:text-5xl">
               From Lockdown to World Cup Fan Zones
             </h2>
@@ -186,8 +230,14 @@ export default function Home() {
 
       {/* HIRE */}
       <section className="mx-auto max-w-6xl px-5 py-24">
-        <p className="section-label text-xs uppercase text-gold">Hire</p>
-        <h2 className="font-display mt-3 text-4xl text-chalk md:text-5xl">Book a Live Set</h2>
+        <p className="section-label text-xs uppercase text-gold">Performances & Bookings</p>
+        <h2 className="font-display mt-3 text-4xl text-chalk md:text-5xl">
+          Football Freestyle Shows for Events in Qatar
+        </h2>
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-chalk-dim/75">
+          Choose a performance for your event, from corporate entertainment and product
+          activations to sports occasions, weddings and private celebrations.
+        </p>
         <div className="mt-10 grid gap-px overflow-hidden border border-turf-line bg-turf-line sm:grid-cols-2">
           {site.navHire.map((s) => {
             const descriptions: Record<string, string> = {
