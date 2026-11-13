@@ -212,7 +212,7 @@ export default function Home() {
               From Lockdown to World Cup Fan Zones
             </h2>
             <p className="mt-5 text-base leading-relaxed text-chalk-dim/80">
-              What started as a way to stay active during COVID-19 became 8 years of dedication —
+              What started as a way to stay active during COVID-19 grew into a journey of dedication —
               performances at the FIFA World Cup Qatar 2022 and AFC Asian Cup 2023 Fan Zones, a reel
               that crossed 22 million views, and a growing list of brand collaborations.
             </p>
