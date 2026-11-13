@@ -2,7 +2,7 @@ import LocationLandingPage from "@/components/LocationLandingPage";
 
 export const metadata = {
   title: "Football Freestyler in Al Wakrah, Qatar | Sinan Basim",
-  description: "Planning an event in Al Wakrah? Enquire with Doha-based football freestyler Sinan Basim about a live performance for community events, sports programmes, brand activations and private celebrations in the area.",
+  description: "Planning an event in Al Wakrah? Book Doha-based football freestyler Sinan Basim for a live performance for community events, sports programmes, brand activations and private celebrations in the area.",
   alternates: { canonical: "/football-freestyler-al-wakrah" },
   openGraph: {
     type: "website" as const,
