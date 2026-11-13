@@ -2,7 +2,7 @@ import LocationLandingPage from "@/components/LocationLandingPage";
 
 export const metadata = {
   title: "Football Freestyler in Al Khor, Qatar | Sinan Basim",
-  description: "Need a football freestyler for an event in Al Khor? Sinan Basim takes enquiries for live football freestyle performances across Qatar, including sports events, company functions, brand activations and private celebrations in the north.",
+  description: "Need a football freestyler for an event in Al Khor? Sinan Basim is available for live football freestyle performances across Qatar, including sports events, company functions, brand activations and private celebrations in the north.",
   alternates: { canonical: "/football-freestyler-al-khor" },
   openGraph: {
     type: "website" as const,
