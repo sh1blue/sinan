@@ -218,7 +218,6 @@ export default function DohaFreestylerPage() {
           >
             Explore all Qatar locations →
           </Link>
-          </div>
         </div>
       </section>
     </>
