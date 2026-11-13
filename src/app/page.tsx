@@ -317,11 +317,17 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-5 py-24">
         <div className="flex items-end justify-between">
           <div>
-            <p className="section-label text-xs uppercase text-gold">Watch</p>
-            <h2 className="font-display mt-3 text-4xl text-chalk md:text-5xl">Recent Work</h2>
+            <p className="section-label text-xs uppercase text-gold">Football Freestyle Videos</p>
+            <h2 className="font-display mt-3 text-4xl text-chalk md:text-5xl">
+              Watch Sinan Basim in Action
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-chalk-dim/75">
+              Explore football freestyle performances, event highlights and creative football
+              content by Sinan Basim, filmed in Qatar and beyond.
+            </p>
           </div>
           <Link href="/recent-work" className="hidden text-sm font-medium text-flare md:block">
-            View all →
+            View all videos →
           </Link>
         </div>
         <div className="mt-10 grid gap-10 sm:grid-cols-3">
