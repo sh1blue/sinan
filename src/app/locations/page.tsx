@@ -13,7 +13,7 @@ const locations = [
 
 export const metadata = {
   title: "Locations Across Qatar | Football Freestyler Sinan Basim",
-  description: "Explore locations across Qatar where you can enquire about football freestyle performances by Sinan Basim, based in Doha.",
+  description: "Football freestyle performances by Sinan Basim are available for bookings across all eight municipalities of Qatar.",
   alternates: { canonical: "/locations" },
 };
 
