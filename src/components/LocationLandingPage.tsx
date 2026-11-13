@@ -177,8 +177,7 @@ export default function LocationLandingPage({
             Planning an event in {name}?
           </h2>
           <p className="mt-4 text-chalk-dim/80">
-            Send the event date, venue and a short description. Sinan can discuss the
-            performance format, timing and availability with you.
+            Football freestyle performances are available in {name}. Message Sinan on WhatsApp to discuss your event date, schedule and preferred performance format.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a
