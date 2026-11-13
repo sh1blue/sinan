@@ -255,12 +255,20 @@ export default function Home() {
               celebrations, each performance can be shaped around the event, audience and setting.
               Explore the show options below or get in touch to discuss your event.
             </p>
-            <Link
-              href="/contact-us"
-              className="inline-block border-b border-flare pb-1 text-sm font-medium text-flare"
-            >
-              Enquire about a performance →
-            </Link>
+            <div className="flex flex-wrap gap-x-6 gap-y-3">
+              <Link
+                href="/contact-us"
+                className="inline-block border-b border-flare pb-1 text-sm font-medium text-flare"
+              >
+                Enquire about a performance →
+              </Link>
+              <Link
+                href="/football-freestyler-doha"
+                className="inline-block border-b border-turf-line pb-1 text-sm font-medium text-chalk-dim transition hover:border-flare hover:text-flare"
+              >
+                Football freestyler in Doha →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
