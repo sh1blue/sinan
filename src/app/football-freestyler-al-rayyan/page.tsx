@@ -2,7 +2,7 @@ import LocationLandingPage from "@/components/LocationLandingPage";
 
 export const metadata = {
   title: "Football Freestyler in Al Rayyan, Qatar | Sinan Basim",
-  description: "Looking for a football freestyler in Al Rayyan? Sinan Basim offers live football freestyle entertainment for corporate functions, sports occasions, brand activations and private celebrations. Enquire with your venue and event details to discuss a suitable performance.",
+  description: "Looking for a football freestyler in Al Rayyan? Sinan Basim is available for live football freestyle performances for corporate functions, sports occasions, brand activations and private celebrations. Enquire with your venue and event details to discuss a suitable performance.",
   alternates: { canonical: "/football-freestyler-al-rayyan" },
   openGraph: {
     type: "website" as const,
