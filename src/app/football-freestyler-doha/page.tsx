@@ -119,15 +119,17 @@ export default function DohaFreestylerPage() {
           </div>
           <div className="space-y-4 text-base leading-relaxed text-chalk-dim/80">
             <p>
-              Sinan is based in Doha and takes enquiries for football freestyle performances
-              across Qatar. Whether you are planning a company gathering, a public sports event
-              or a private celebration, share the venue and event details to discuss a suitable
-              performance.
+              Based in Doha, Sinan takes enquiries for football freestyle performances across
+              the capital and the wider Qatar. The city brings together corporate venues in
+              West Bay, cultural and public spaces around Msheireb and Katara, and major
+              sports facilities around Aspire Zone. Each setting calls for a slightly
+              different performance plan.
             </p>
             <p>
-              Performance duration and format are flexible. They can be discussed around your
-              schedule, audience and event requirements, rather than being limited to one fixed
-              show length.
+              Performance duration and format are flexible. Share the venue, event date,
+              audience and programme schedule so Sinan can discuss a format that works for
+              your event. The final setup will depend on the available space and the venue's
+              requirements.
             </p>
           </div>
         </div>
@@ -157,6 +159,46 @@ export default function DohaFreestylerPage() {
                 <span className="mt-4 inline-block text-sm text-gold">Explore service →</span>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-turf-line bg-turf py-20 md:py-24">
+        <div className="mx-auto max-w-6xl px-5">
+          <p className="section-label text-xs uppercase text-gold">Planning a Doha Event</p>
+          <h2 className="font-display mt-3 max-w-3xl text-4xl text-chalk md:text-5xl">
+            A performance shaped around your venue and audience.
+          </h2>
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-chalk-dim/80">
+            Doha hosts everything from business conferences and hotel functions to cultural
+            programmes and sports events. The venue is an important part of the plan: a stage
+            presentation, a close-up freestyle demonstration and an audience-participation
+            segment each need a different amount of space and preparation.
+          </p>
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
+            <div className="border border-turf-line bg-turf-light p-7">
+              <h3 className="font-display text-2xl text-chalk">Corporate & conference venues</h3>
+              <p className="mt-3 text-sm leading-relaxed text-chalk-dim/75">
+                For events around West Bay, the Doha Exhibition and Convention Centre or
+                Qatar National Convention Centre, discuss the running order, stage dimensions,
+                sound arrangements and audience flow with the event team.
+              </p>
+            </div>
+            <div className="border border-turf-line bg-turf-light p-7">
+              <h3 className="font-display text-2xl text-chalk">Cultural, community & sports settings</h3>
+              <p className="mt-3 text-sm leading-relaxed text-chalk-dim/75">
+                For programmes connected with Msheireb, Katara or Aspire Zone, the performance
+                can be considered as a scheduled stage feature, a short demonstration or an
+                interactive moment, subject to the venue's approval and event setup.
+              </p>
+            </div>
+          </div>
+          <div className="mt-8 border-l-2 border-flare pl-5">
+            <p className="text-sm leading-relaxed text-chalk-dim/80">
+              To get a useful response, include your event date, exact venue, expected audience,
+              indoor or outdoor setting, and any timing or space restrictions. There is no
+              fixed performance duration; the format can be discussed around the programme.
+            </p>
           </div>
         </div>
       </section>
