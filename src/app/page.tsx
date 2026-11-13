@@ -198,44 +198,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* THE STORY */}
-      <section className="mx-auto max-w-6xl px-5 py-24">
-        <div className="grid gap-12 md:grid-cols-2 md:items-center">
-          <div className="relative aspect-[4/5] overflow-hidden">
-            <Image
-              src="/images/doha-street-pose.jpg"
-              alt="Sinan Basim performing a freestyle pose on a street in Doha, Qatar"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div>
-            <p className="section-label text-xs uppercase text-gold">Meet the Freestyler</p>
-            <h2 className="font-display mt-3 text-4xl text-chalk md:text-5xl">
-              From Lockdown to World Cup Fan Zones
-            </h2>
-            <p className="mt-5 text-base leading-relaxed text-chalk-dim/80">
-              What started as a way to stay active during COVID-19 grew into a journey of dedication —
-              performances at the FIFA World Cup Qatar 2022 and AFC Asian Cup 2023 Fan Zones, a reel
-              that crossed 22 million views, and a growing list of brand collaborations.
-            </p>
-            <Link
-              href="/about-us"
-              className="mt-6 inline-block border-b border-flare text-sm font-medium text-flare"
-            >
-              Read the full story →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <div className="chalk-divider mx-auto max-w-6xl" />
-
       {/* HIRE */}
       <section className="mx-auto max-w-6xl px-5 py-24">
-        <p className="section-label text-xs uppercase text-gold">Performances & Bookings</p>
+        <p className="section-label text-xs uppercase text-gold">Events & Entertainment in Qatar</p>
         <h2 className="font-display mt-3 text-4xl text-chalk md:text-5xl">
-          Football Freestyle Shows for Events in Qatar
+          Football Freestyle for Every Occasion
         </h2>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-chalk-dim/75">
           Choose a performance for your event, from corporate entertainment and product
@@ -267,6 +234,41 @@ export default function Home() {
               </Link>
             );
           })}
+        </div>
+      </section>
+
+
+      <div className="chalk-divider mx-auto max-w-6xl" />
+
+
+      {/* THE STORY */}
+      <section className="mx-auto max-w-6xl px-5 py-24">
+        <div className="grid gap-12 md:grid-cols-2 md:items-center">
+          <div className="relative aspect-[4/5] overflow-hidden">
+            <Image
+              src="/images/doha-street-pose.jpg"
+              alt="Sinan Basim performing a freestyle pose on a street in Doha, Qatar"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <p className="section-label text-xs uppercase text-gold">Meet the Freestyler</p>
+            <h2 className="font-display mt-3 text-4xl text-chalk md:text-5xl">
+              From Lockdown to World Cup Fan Zones
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-chalk-dim/80">
+              What started as a way to stay active during COVID-19 grew into a journey of dedication —
+              performances at the FIFA World Cup Qatar 2022 and AFC Asian Cup 2023 Fan Zones, a reel
+              that crossed 22 million views, and a growing list of brand collaborations.
+            </p>
+            <Link
+              href="/about-us"
+              className="mt-6 inline-block border-b border-flare text-sm font-medium text-flare"
+            >
+              Read the full story →
+            </Link>
+          </div>
         </div>
       </section>
 
