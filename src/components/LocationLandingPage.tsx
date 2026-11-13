@@ -26,7 +26,7 @@ export default function LocationLandingPage({
     "@type": "Service",
     name: `Football Freestyle Performances in ${name}`,
     serviceType: "Live football freestyle entertainment",
-    description: `Live football freestyle performances for events and celebrations in ${name}, Qatar. Enquiries are discussed based on event details and availability.`,
+    description: `Live football freestyle performances for events and celebrations in ${name}, Qatar. Available for event bookings across Qatar, including ${name}.`,
     areaServed: {
       "@type": "AdministrativeArea",
       name: name,
@@ -118,10 +118,7 @@ export default function LocationLandingPage({
             <p>{localContext}</p>
             <p>{eventContext}</p>
             <p>
-              Sinan is based in Doha and takes enquiries for events across Qatar. Performance
-              duration and format are flexible and can be discussed around your schedule,
-              audience and event requirements. Share your venue and event details to check
-              availability.
+              Sinan is based in Doha and available for bookings throughout Qatar, including ${name}. Performance duration and format are flexible and can be discussed directly with Sinan to suit your event schedule, audience and requirements.
             </p>
           </div>
         </div>
