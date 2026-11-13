@@ -9,6 +9,7 @@ const links = [
   { label: "Commercial/Social", href: "/commercial-brands" },
   { label: "About Me", href: "/about-us" },
   { label: "Recent Work", href: "/recent-work" },
+  { label: "Locations", href: "/football-freestyler-doha" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "Contact", href: "/contact-us" },
 ];
